@@ -1,11 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-
-
-
-
-
 inquirer
   .prompt([
     {
@@ -16,8 +11,8 @@ inquirer
    ])
   .then((answers) => {
       const mdContent = makeMd(answers);
-    fs.writeFile('README.md', mdContent, (err) =>
+    fs.writeFile('index.html', mdContent, (err) =>
     err ? console.log(err) : console.log('Success!'));
   });
 
-  const makeHtml= ({}) =>
+  const makeHtml= ({name, id, email, gitHub, officeNum, school}) =>

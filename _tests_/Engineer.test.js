@@ -15,7 +15,7 @@ test("receive email", () => {
     expect(engEmail.getEmail()).toBe("John010@gmail.com"); 
 })
 
-test("receive school", () => {
+test("receive gitHub", () => {
     const engGitHub = new Engineer("John", "1", "John010@gmail.com", "https://github.com/John010");
     expect(engGitHub.getGitHub()).toBe("https://github.com/John010")
 })

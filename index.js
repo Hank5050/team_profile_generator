@@ -10,7 +10,7 @@ const empList = [];
 const newManager = () => {
 inquirer.prompt(managePrompt)
 .then(answers => {
-const member = new Manager(answers.role, answers.name, answers.id, answers.email, answers.officeNum)
+const member = new Manager(answers.name, answers.id, answers.email, answers.officeNum)
 empList.push(member)
 main()
 });
@@ -19,7 +19,7 @@ main()
 const newEngineer = () => {
   inquirer.prompt(enginePrompt)
   .then(answers => {
-    const member = new Engineer(answers.role, answers.name, answers.id, answers.email, answers.gitHub)
+    const member = new Engineer(answers.name, answers.id, answers.email, answers.gitHub)
     empList.push(member)
     main()
   });
@@ -28,14 +28,14 @@ const newEngineer = () => {
 const newIntern = () => {
   inquirer.prompt(internPrompt)
   .then(answers => {
-    const member = new Intern(answers.role, answers.name, answers.id, answers.email, answers.school)
+    const member = new Intern(answers.name, answers.id, answers.email, answers.school)
     empList.push(member)
     main()
   });
 }
 const createHtml = () => {
   console.log('Html Page Successfully Created!!');
-    fs.writeFile('./ex_html/index.html', makeHtml(empList), (err) => {
+    fs.writeFile('./dist/index.html', makeHtml(empList), (err) => {
             if (err) throw err;
         });
     

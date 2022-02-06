@@ -18,6 +18,6 @@ test("receive email", () => {
 
 test("receive office number", () => {
     const manNum = new Manager("John", "1", "John010@gmail.com", '0123456789');
-    expect(manNum.getOfficeNumer()).toBe("0123456789")
+    expect(manNum.getOfficeNumber()).toBe("0123456789")
 })
 
